@@ -7,20 +7,39 @@ const ConcertWebsite = () => {
   const artists = [
     {
       name: "남수",
-      description: "기타 선율에 실어 조용히 속삭이듯 노래하는 싱어송라이터",
-      instagram: "ddackddaguri__books"
+      description: "자연과 일상에서 영감을 받아 노래를 만드는 싱어송라이터",
+      instagram: "ddackddaguri__books",
+      photoUrl: "https://ifh.cc/g/0Gvj7M.png"
     },
     {
       name: "세민",
       description: "도시 속 다양한 소리와 이야기에 귀 기울이며 음악을 만드는 아티스트",
-      instagram: "jinyk0602"
+      instagram: "jinyk0602",
+      photoUrl: "https://image.bugsm.co.kr/album/images/500/206169/20616910.jpg"
     },
     {
       name: "여울",
-      description: "자연과 일상에서 영감을 받아 노래를 만드는 싱어송라이터",
-      instagram: "yeoouul"
+      description: "기타 선율에 실어 조용히 속삭이듯 노래하는 싱어송라이터",
+      instagram: "yeoouul",
+      photoUrl: "https://ifh.cc/g/fOvAaX.png"
     }
   ];
+
+  const venueAddress = "수원시 팔달구 정조로 796번길 9 딱따구리책방";
+
+  const openGoogleMaps = () => {
+    const encodedAddress = encodeURIComponent(venueAddress);
+    const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodedAddress}`;
+    window.open(mapsUrl, '_blank', 'noopener,noreferrer');
+  };
+
+  const openBookingPage = () => {
+    window.open("https://forms.gle/oRg2CbpK5jWgQxA16", '_blank', 'noopener,noreferrer');
+  };
+
+  const openInstagram = (username) => {
+    window.open(`https://www.instagram.com/${username}/`, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <div className="concert-website">
@@ -43,7 +62,12 @@ const ConcertWebsite = () => {
 
       <main className="container">
         <section className="hero">
-          <img src="https://ifh.cc/g/4WhmFM.jpg" alt="딱따구리포크 공연 포스터" className="poster-image" />
+          <img 
+            src="https://ifh.cc/g/4WhmFM.jpg" 
+            alt="딱따구리포크 공연 포스터" 
+            className="poster-image clickable-image" 
+            onClick={openBookingPage}
+          />
           <div className="hero-content">
             <h2>
               2024 딱따구리책방<br />
@@ -87,12 +111,17 @@ const ConcertWebsite = () => {
           <h3>출연 아티스트</h3>
           <div className="artist-grid">
             {artists.map((artist, index) => (
-              <div key={index} className="artist-card">
-                <h4>{artist.name}</h4>
-                <p>{artist.description}</p>
-                <a href={`https://www.instagram.com/${artist.instagram}/`} target="_blank" rel="noopener noreferrer" className="instagram-link">
-                  Instagram: @{artist.instagram}
-                </a>
+              <div key={index} className="artist-card clickable-card" onClick={() => openInstagram(artist.instagram)}>
+                <div className="artist-info">
+                  <h4>{artist.name}</h4>
+                  <p>{artist.description}</p>
+                  <span className="instagram-link">
+                    Instagram: @{artist.instagram}
+                  </span>
+                </div>
+                <div className="artist-photo">
+                  <img src={artist.photoUrl} alt={`${artist.name} 사진`} />
+                </div>
               </div>
             ))}
           </div>
@@ -105,16 +134,18 @@ const ConcertWebsite = () => {
               <span role="img" aria-label="book">📚</span>
               <strong>딱따구리책방</strong>
             </p>
-            <p>수원시 팔달구 정조로 796번길 9</p>
+            <p className="clickable-address" onClick={openGoogleMaps}>
+              {venueAddress}
+            </p>
             <p className="parking-info">
               주차는 근처 공영주차장을 이용해주세요. 시장근처라 주말엔 차량이 많으니 대중교통 이용을 권장합니다.
             </p>
           </div>
-          <div className="map-container">
+          <div className="map-container" onClick={openGoogleMaps}>
             <img 
               src="https://image.bookshopmap.com/1600,fit,q60/venue/20240421/496026f49e6fa5cb9d762e68887ef62e567cacf9950a9a4c120c8dcabdb69738.jpg?ver=1713680551"
               alt="딱따구리책방 위치" 
-              className="static-map"
+              className="static-map clickable-image"
             />
           </div>
         </section>
