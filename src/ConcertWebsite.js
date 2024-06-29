@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ConcertWebsite.css';
 
 const ConcertWebsite = () => {
@@ -49,21 +49,49 @@ const ConcertWebsite = () => {
     }
   };
 
+  const toggleMenu = (e) => {
+    e.stopPropagation();
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'visible';
+    }
+  }, [isMenuOpen]);
+
   return (
-    <div className="concert-website">
-      <nav>
+    <div className="concert-website" onClick={closeMenu}>
+      <nav onClick={(e) => e.stopPropagation()}>
         <div className="container">
           <h1>딱따구리포크</h1>
           <button 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={toggleMenu}
             className="menu-toggle"
           >
             {isMenuOpen ? '닫기' : '메뉴'}
           </button>
           <ul className={isMenuOpen ? 'show' : ''}>
-            <li><a href="#info">공연 정보</a></li>
-            <li><a href="#artists">아티스트</a></li>
-            <li><a href="#location">위치</a></li>
+            <li><a href="#info" onClick={closeMenu}>공연 정보</a></li>
+            <li><a href="#artists" onClick={closeMenu}>아티스트</a></li>
+            <li><a href="#location" onClick={closeMenu}>위치</a></li>
           </ul>
         </div>
       </nav>
@@ -77,11 +105,14 @@ const ConcertWebsite = () => {
             onClick={openBookingPage}
           />
           <div className="hero-content">
-            <h2>
+             <h2>
               2024 딱따구리책방<br />
               특별기획공연<br />
-              <span className="highlight">'딱따구리 포크'</span>
             </h2>
+
+            <h1>
+              <span className="highlight">딱따구리 포크</span>
+            </h1>
             <p>세 여성의 목소리로 들려주는 일상 속 따뜻한 노래</p>
             <a href="https://forms.gle/oRg2CbpK5jWgQxA16" target="_blank" rel="noopener noreferrer" className="booking-button">
               예매하기
