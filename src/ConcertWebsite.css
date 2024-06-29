@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
+
+@font-face {
+    font-family: 'HS-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gaegu', 'HS-Regular', 'Malgun Gothic', sans-serif;
+    background-color: #1C1C1C;
+    color: #E0E0E0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav {
+    background-color: #2C2C2C;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-family: 'Gaegu', 'Malgun Gothic', sans-serif;
+    color: #FFFFFF;
+    font-size: 2rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #E0E0E0;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #FFFFFF;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #E0E0E0;
+    cursor: pointer;
+}
+
+main {
+    padding: 2rem 0;
+}
+
+section {
+    background-color: #2C2C2C;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+h2, h3, h4 {
+    font-family: 'Gaegu', 'Malgun Gothic', sans-serif;
+    margin-top: 0;
+    color: #FFFFFF;
+}
+
+h2 {
+    font-size: 3rem;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.poster-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+}
+
+.hero-content {
+    max-width: 100%;
+    padding-left: 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    line-height: 1.2;
+    width: 100%;
+    border-bottom: none;
+    color: #FFFFFF;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: #CCCCCC;
+}
+
+.highlight {
+    color: #FFD700;
+    font-size: 1.4em;
+    display: block;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-list li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.info-list li span {
+    margin-right: 0.5rem;
+}
+
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.artist-card {
+    background-color: #3C3C3C;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.artist-card h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #FFD700;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+.instagram-link {
+    display: inline-block;
+    color: #E1306C;
+    text-decoration: none;
+    margin-top: 0.5rem;
+}
+
+.location-info p {
+    margin-bottom: 0.5rem;
+}
+
+.location-info strong {
+    font-size: 1.2rem;
+    color: #FFFFFF;
+}
+
+.parking-info {
+    font-size: 0.9rem;
+    color: #CCCCCC;
+}
+
+.map-container {
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.static-map {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #2C2C2C;
+    padding: 1rem;
+    text-align: center;
+    color: #E0E0E0;
+    font-size: 0.9rem;
+}
+
+.booking-button {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #1C1C1C;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.booking-button:hover {
+    background-color: #FFC400;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.booking-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #2C2C2C;
+        padding: 1rem;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav li {
+        margin: 0.5rem 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        padding-left: 0;
+        margin-top: 2rem;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .artist-card h4 {
+        font-size: 1.5rem;
+    }
+}
