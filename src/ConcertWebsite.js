@@ -6,15 +6,19 @@ const ConcertWebsite = () => {
 
   const artists = [
     {
-      name: "남수",
-      description: "자연과 일상에서 영감을 받아 노래를 만드는 싱어송라이터",
-      instagram: "ddackddaguri__books",
-      photoUrl: "https://ifh.cc/g/0Gvj7M.png"
-    },
+  name: "남수",
+  description: "자연과 일상에서 영감을 받아 노래를 만드는 싱어송라이터",
+  link: "https://www.melon.com/album/detail.htm?albumId=10992395",
+  linkType: "melon",
+  linkText: "싱글 [와산리](2022)",
+  photoUrl: "https://ifh.cc/g/0Gvj7M.png"
+},
     {
       name: "세민",
       description: "도시 속 다양한 소리와 이야기에 귀 기울이며 음악을 만드는 아티스트",
-      instagram: "jinyk0602",
+      link: "https://www.melon.com/album/detail.htm?albumId=11395938",
+      linkType: "melon",
+      linkText: "앨범 [여린 잎](2024)",
       photoUrl: "https://image.bugsm.co.kr/album/images/500/206169/20616910.jpg"
     },
     {
@@ -37,8 +41,12 @@ const ConcertWebsite = () => {
     window.open("https://forms.gle/oRg2CbpK5jWgQxA16", '_blank', 'noopener,noreferrer');
   };
 
-  const openInstagram = (username) => {
-    window.open(`https://www.instagram.com/${username}/`, '_blank', 'noopener,noreferrer');
+  const openArtistLink = (artist) => {
+    if (artist.linkType === "melon") {
+      window.open(artist.link, '_blank', 'noopener,noreferrer');
+    } else if (artist.instagram) {
+      window.open(`https://www.instagram.com/${artist.instagram}/`, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
@@ -104,6 +112,14 @@ const ConcertWebsite = () => {
               <span role="img" aria-label="music">🎵</span>
               예매 20,000원 (음료 한 잔 포함)
             </li>
+            <li>
+      <span role="img" aria-label="star">⭐</span>
+      스페셜 게스트: 모레도토요일
+    </li>
+    <li>
+      <span role="img" aria-label="microphone">🎤</span>
+      공연 후에는 오픈 마이크 타임이 이어집니다.
+    </li>
           </ul>
         </section>
 
@@ -111,12 +127,12 @@ const ConcertWebsite = () => {
           <h3>출연 아티스트</h3>
           <div className="artist-grid">
             {artists.map((artist, index) => (
-              <div key={index} className="artist-card clickable-card" onClick={() => openInstagram(artist.instagram)}>
+              <div key={index} className="artist-card clickable-card" onClick={() => openArtistLink(artist)}>
                 <div className="artist-info">
                   <h4>{artist.name}</h4>
                   <p>{artist.description}</p>
-                  <span className="instagram-link">
-                    Instagram: @{artist.instagram}
+                  <span className="artist-link">
+                    {artist.instagram ? `Instagram: @${artist.instagram}` : artist.linkText}
                   </span>
                 </div>
                 <div className="artist-photo">
