@@ -6,13 +6,13 @@ const ConcertWebsite = () => {
 
   const artists = [
     {
-  name: "남수",
-  description: "자연과 일상에서 영감을 받아 노래를 만드는 싱어송라이터",
-  link: "https://www.melon.com/album/detail.htm?albumId=10992395",
-  linkType: "melon",
-  linkText: "싱글 [와산리](2022)",
-  photoUrl: "https://ifh.cc/g/0Gvj7M.png"
-},
+      name: "남수",
+      description: "자연과 일상에서 영감을 받아 노래를 만드는 싱어송라이터",
+      link: "https://www.melon.com/album/detail.htm?albumId=10992395",
+      linkType: "melon",
+      linkText: "싱글 [와산리](2022)",
+      photoUrl: "https://ifh.cc/g/0Gvj7M.png"
+    },
     {
       name: "세민",
       description: "도시 속 다양한 소리와 이야기에 귀 기울이며 음악을 만드는 아티스트",
@@ -113,13 +113,13 @@ const ConcertWebsite = () => {
               예매 20,000원 (음료 한 잔 포함)
             </li>
             <li>
-      <span role="img" aria-label="star">⭐</span>
-      스페셜 게스트: 모레도토요일
-    </li>
-    <li>
-      <span role="img" aria-label="microphone">🎤</span>
-      공연 후에는 오픈마이크 시간이 이어집니다.
-    </li>
+              <span role="img" aria-label="star">⭐</span>
+              스페셜 게스트: 모레도토요일
+            </li>
+            <li>
+              <span role="img" aria-label="microphone">🎤</span>
+              공연 후에는 오픈마이크 시간이 이어집니다.
+            </li>
           </ul>
         </section>
 

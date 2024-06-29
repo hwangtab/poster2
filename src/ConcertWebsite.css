@@ -1,370 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
-
-@font-face {
-    font-family: 'HS-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff')    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'HS산토끼체';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HS산토끼체.woff') format('woff');
-    font-weight: normal;
-    font-style: norma    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&family=Nanum+Pen+Script&display=swap');
 
 :root {
-    --bg-dark: #1a1a2e;
-    --bg-darker: #16213e;
-    --text-light: #e9e9e9;
-    --accent-pink: #ffa6c1;
-    --accent-purpl    --accent-mint: #98f6e4;
+  --bg-dark: #1a1a2e;
+  --bg-darker: #16213e;
+  --text-light: #e9e9e9;
+  --accent-pink: #ffa6c1;
+  --accent-purple: #9b5de5;
+  --accent-mint: #98f6e4;
+  --title-font: 'Gaegu', cursive;
+  --body-font: 'Nanum Pen Script', cursive;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'HS산토끼체', 'Malgun Gothic', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text-light);
-    line}
-    h1, h2, h3, h4, h5, h6 {
-        font-family: 'Gaegu', 'HS-Regular', 'Malgun Gothic', sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font);
+  font-weight: 700;
+}
+
+p, li, a {
+  font-family: var(--body-font);
+}
+
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 nav {
-    background-color: var(--bg-darker);
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  background-color: var(--bg-darker);
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav h1 {
-    color: var(--accent-pink);
-    font-size: 2rem;
-    margin: 0;
+  color: var(--accent-pink);
+  font-size: 2rem;
+  margin: 0;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 nav li {
-    margin-left: 1rem;
+  margin-left: 1rem;
 }
 
 nav a {
-    text-decoration: none;
-    color: var(--text-light);
-    font-weight: bold;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--text-light);
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: var(--accent-purple);
+  color: var(--accent-purple);
 }
 
 .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1rem;
-    color: var(--text-light);
-    cursor: pointer;
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--text-light);
+  cursor: pointer;
 }
 
 main {
-    padding: 2rem 0;
+  padding: 2rem 0;
 }
 
 section {
-    background-color: var(--bg-darker);
-    border-radius: 8px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-h2, h3, h4 {
-    margin-top: 0;
-    color: var(--accent-pink);
-}
-
-h2 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    border-bottom: 2px solid var(--accent-purple);
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
+  background-color: var(--bg-darker);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 0;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  text-align: center;
 }
 
 .poster-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    margin-bottom: 2rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  margin-bottom: 2rem;
 }
 
 .hero-content {
-    max-width: 100%;
-    padding-left: 0;
+  max-width: 100%;
+  padding-left: 0;
 }
 
 .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    line-height: 1.2;
-    width: 100%;
-    border-bottom: none;
-    color: var(--text-light);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+  line-height: 1.2;
+  width: 100%;
+  border-bottom: none;
+  color: var(--text-light);
 }
 
 .hero p {
-    font-size: 1.5rem;
-    color: var(--accent-mint);
-    margin-top: 1rem;
+  font-size: 1.8rem;
+  color: var(--accent-mint);
+  margin-top: 1rem;
 }
 
 .highlight {
-    color: #FFD700;
-    font-size: 1.4em;
-    font-weight: bold;
-    display: block;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  color: #FFD700;
+  font-size: 1.4em;
+  font-weight: bold;
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 .info-list {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
+  font-size: 1.2rem;
 }
 
 .info-list li {
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .info-list li span {
-    margin-right: 0.5rem;
-    color: var(--accent-pink);
+  margin-right: 0.5rem;
+  color: var(--accent-pink);
 }
 
 .artist-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
 .artist-card {
-    background-color: rgba(255,255,255,0.05);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    display: flex;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(255,255,255,0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .artist-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .artist-info {
-    flex: 1;
+  flex: 1;
 }
 
 .artist-photo {
-    width: 120px;
-    height: 120px;
-    margin-left: 1rem;
-    overflow: hidden;
-    border-radius: 50%;
-    border: 3px solid var(--accent-purple);
+  width: 120px;
+  height: 120px;
+  margin-left: 1rem;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid var(--accent-purple);
 }
 
 .artist-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .artist-card h4 {
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    color: var(--accent-pink);
-    font-size: 1.8rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-}
-
-.instagram-link {
-    display: inline-block;
-    color: var(--accent-purple);
-    text-decoration: none;
-    margin-top: 0.5rem;
-    transition: color 0.3s ease;
-}
-
-.instagram-link:hover {
-    color: var(--accent-pink);
-}
-
-.location-info p {
-    margin-bottom: 0.5rem;
-}
-
-.location-info strong {
-    font-size: 1.2rem;
-    color: var(--accent-mint);
-}
-
-.parking-info {
-    font-size: 0.9rem;
-    color: var(--text-light);
-    opacity: 0.8;
-}
-
-.map-container {
-    margin-top: 1rem;
-    border-radius: 8px;
-    overflow: hidden;
-    max-width: 100%;
-}
-
-.static-map {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
-}
-
-footer {
-    background-color: var(--bg-darker);
-    padding: 1rem;
-    text-align: center;
-    color: var(--text-light);
-    font-size: 0.9rem;
-}
-
-.booking-button {
-    display: inline-block;
-    background-color: var(--accent-pink);
-    color: var(--bg-dark);
-    padding: 12px 24px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.booking-button:hover {
-    background-color: var(--accent-purple);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
-}
-
-.booking-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.clickable-address, .clickable-image {
-    cursor: pointer;
-    transition: opacity 0.3s ease;
-}
-
-.clickable-address:hover, .clickable-image:hover {
-    opacity: 0.8;
-}
-
-.clickable-address {
-    text-decoration: underline;
-    color: var(--accent-mint);
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background-color: var(--bg-darker);
-        padding: 1rem;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    nav li {
-        margin: 0.5rem 0;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        padding-left: 0;
-        margin-top: 2rem;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    h2 {
-        font-size: 2.5rem;
-    }
-
-    .artist-card h4 {
-        font-size: 1.5rem;
-    }
-
-    .artist-card {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .artist-photo {
-        margin-left: 0;
-        margin-bottom: 1rem;
-    }
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: var(--accent-pink);
+  font-size: 2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
