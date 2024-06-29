@@ -118,7 +118,7 @@ const ConcertWebsite = () => {
     </li>
     <li>
       <span role="img" aria-label="microphone">🎤</span>
-      공연 후에는 오픈 마이크 타임이 이어집니다.
+      공연 후에는 오픈마이크 시간이 이어집니다.
     </li>
           </ul>
         </section>
