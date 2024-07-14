@@ -6,30 +6,27 @@ const ConcertWebsite = () => {
 
   const artists = [
     {
-      name: "남수",
-      description: "자연과 일상에서 영감을 받아 노래를 만드는 싱어송라이터",
-      link: "https://www.melon.com/album/detail.htm?albumId=10992395",
-      linkType: "melon",
-      linkText: "싱글 [와산리](2022)",
-      photoUrl: "https://ifh.cc/g/0Gvj7M.png"
+      name: "허정혁",
+      description: "서정의 시인",
+      photoUrl: "https://i.namu.wiki/i/H9DQCyBXqmN5AeZ5tZpRsAQe9CQheCNC_1g9MV_qdi_CeQ3T8yJ-oYwJQJgXhbZc2MNou5tAA0jlwKI0UUzSV6oCBrRgmOxMfVmOlV0iOxT8ciNCWanXe17IvE9CCmFkzeLbBk-ae3a0NTImWQd1RQ.webp",
+      instagram: "huhjunghyuk_"
     },
     {
-      name: "세민",
-      description: "도시 속 다양한 소리와 이야기에 귀 기울이며 음악을 만드는 아티스트",
-      link: "https://www.melon.com/album/detail.htm?albumId=11395938",
-      linkType: "melon",
-      linkText: "앨범 [여린 잎](2024)",
-      photoUrl: "https://image.bugsm.co.kr/album/images/500/206169/20616910.jpg"
+      name: "유동혁",
+      description: "거칠지만 따뜻한 포크",
+      photoUrl: "https://ifh.cc/g/NZwyZZ.jpg",
+      instagram: "youdh_music"
     },
     {
-      name: "여울",
-      description: "기타 선율에 실어 조용히 속삭이듯 노래하는 싱어송라이터",
-      instagram: "yeoouul",
-      photoUrl: "https://ifh.cc/g/fOvAaX.png"
+      name: "출장작곡가 김동산",
+      description: "한국의 우디거스리",
+      photoUrl: "https://search.incheonilbo.com/news/photo/201808/902302_201982_3829.jpg",
+      instagram: "dongsan_kim"
     }
   ];
 
   const venueAddress = "수원시 팔달구 정조로 796번길 9 딱따구리책방";
+  const venueInstagram = "ddackddaguri__books";
 
   const openGoogleMaps = () => {
     const encodedAddress = encodeURIComponent(venueAddress);
@@ -38,15 +35,11 @@ const ConcertWebsite = () => {
   };
 
   const openBookingPage = () => {
-    window.open("https://forms.gle/oRg2CbpK5jWgQxA16", '_blank', 'noopener,noreferrer');
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSfFqRLFh88ThoAW8s_AVs_CfjOdipwKVp2ckjpzrB19V-9fNw/viewform", '_blank', 'noopener,noreferrer');
   };
 
-  const openArtistLink = (artist) => {
-    if (artist.linkType === "melon") {
-      window.open(artist.link, '_blank', 'noopener,noreferrer');
-    } else if (artist.instagram) {
-      window.open(`https://www.instagram.com/${artist.instagram}/`, '_blank', 'noopener,noreferrer');
-    }
+  const openInstagram = (instagram) => {
+    window.open(`https://www.instagram.com/${instagram}/`, '_blank', 'noopener,noreferrer');
   };
 
   const toggleMenu = (e) => {
@@ -81,7 +74,7 @@ const ConcertWebsite = () => {
     <div className="concert-website" onClick={closeMenu}>
       <nav onClick={(e) => e.stopPropagation()}>
         <div className="container">
-          <h1>딱따구리포크</h1>
+          <h1>딱따구리 포크</h1>
           <button 
             onClick={toggleMenu}
             className="menu-toggle"
@@ -99,22 +92,22 @@ const ConcertWebsite = () => {
       <main className="container">
         <section className="hero">
           <img 
-            src="https://ifh.cc/g/4WhmFM.jpg" 
+            src="https://ifh.cc/g/r1H0KA.jpg" 
             alt="딱따구리포크 공연 포스터" 
             className="poster-image clickable-image" 
             onClick={openBookingPage}
           />
           <div className="hero-content">
              <h2>
-              2024 딱따구리책방<br />
-              특별기획공연<br />
+              세 음악가가 들려주는<br />
+              삶의 노래
             </h2>
 
             <h1>
               <span className="highlight">딱따구리 포크</span>
             </h1>
-            <p>세 여성의 목소리로 들려주는 일상 속 따뜻한 노래</p>
-            <a href="https://forms.gle/oRg2CbpK5jWgQxA16" target="_blank" rel="noopener noreferrer" className="booking-button">
+            <p>청춘의 성찰, 삶의 소중함, 시대의 아픔과 희망까지</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfFqRLFh88ThoAW8s_AVs_CfjOdipwKVp2ckjpzrB19V-9fNw/viewform" target="_blank" rel="noopener noreferrer" className="booking-button">
               예매하기
             </a>
           </div>
@@ -125,11 +118,11 @@ const ConcertWebsite = () => {
           <ul className="info-list">
             <li>
               <span role="img" aria-label="calendar">📅</span>
-              2024년 7월 13일 (토)
+              2024년 7월 21일 (일)
             </li>
             <li>
               <span role="img" aria-label="clock">🕔</span>
-              17:00 (개장 16:40)
+              17:30
             </li>
             <li>
               <span role="img" aria-label="location">📍</span>
@@ -141,15 +134,15 @@ const ConcertWebsite = () => {
             </li>
             <li>
               <span role="img" aria-label="music">🎵</span>
-              예매 20,000원 (음료 한 잔 포함)
+              예매 25,000원 (음료 포함)
             </li>
             <li>
-              <span role="img" aria-label="star">⭐</span>
-              스페셜 게스트: 모레도토요일
+              <span role="img" aria-label="drink">🍹</span>
+              기본음료로 하이볼을 말아드립니다.
             </li>
             <li>
-              <span role="img" aria-label="microphone">🎤</span>
-              공연 후에는 오픈마이크 시간이 이어집니다.
+              <span role="img" aria-label="cup">🥤</span>
+              다회용잔(유리잔)에 제공됩니다. 텀블러 지참 시 관람이 더 편리합니다.
             </li>
           </ul>
         </section>
@@ -158,13 +151,11 @@ const ConcertWebsite = () => {
           <h3>출연 아티스트</h3>
           <div className="artist-grid">
             {artists.map((artist, index) => (
-              <div key={index} className="artist-card clickable-card" onClick={() => openArtistLink(artist)}>
+              <div key={index} className="artist-card" onClick={() => openInstagram(artist.instagram)}>
                 <div className="artist-info">
                   <h4>{artist.name}</h4>
                   <p>{artist.description}</p>
-                  <span className="artist-link">
-                    {artist.instagram ? `Instagram: @${artist.instagram}` : artist.linkText}
-                  </span>
+                  <p className="instagram-link">@{artist.instagram}</p>
                 </div>
                 <div className="artist-photo">
                   <img src={artist.photoUrl} alt={`${artist.name} 사진`} />
@@ -188,10 +179,10 @@ const ConcertWebsite = () => {
               주차는 근처 공영주차장을 이용해주세요. 시장근처라 주말엔 차량이 많으니 대중교통 이용을 권장합니다.
             </p>
           </div>
-          <div className="map-container" onClick={openGoogleMaps}>
+          <div className="map-container" onClick={() => openInstagram(venueInstagram)}>
             <img 
-              src="https://image.bookshopmap.com/1600,fit,q60/venue/20240421/496026f49e6fa5cb9d762e68887ef62e567cacf9950a9a4c120c8dcabdb69738.jpg?ver=1713680551"
-              alt="딱따구리책방 위치" 
+              src="https://ifh.cc/g/k5jSlt.jpg"
+              alt="딱따구리책방" 
               className="static-map clickable-image"
             />
           </div>
@@ -199,6 +190,7 @@ const ConcertWebsite = () => {
       </main>
 
       <footer>
+        <p>예매 문의 | 010-5150-9407</p>
         <p>&copy; 2024 딱따구리책방. All rights reserved.</p>
       </footer>
     </div>

@@ -1,40 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
 
 @font-face {
-    font-family: 'HS-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+    font-family: 'SunBatang-Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
-    font-family: 'HSJiptokki-Black';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/HSJiptokki-Black.woff2') format('woff2');
-    font-weight: 900;
+    font-family: 'SF_HambakSnow';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_HambakSnow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HS-Regular';
+    src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
 
 :root {
-    --bg-dark: #1a1a2e;
-    --bg-darker: #16213e;
-    --text-light: #e9e9e9;
-    --accent-pink: #ffa6c1;
-    --accent-purple: #b088f9;
-    --accent-mint: #98f6e4;
+    --bg-dark: #1C0522;  /* Deep Purple */
+    --bg-darker: #0E0211;  /* Almost Black Purple */
+    --text-light: #F0E6D2;  /* Light Gold */
+    --accent-gold: #C0A080;  /* Muted Gold */
+    --accent-bright: #FFD700;  /* Bright Gold */
+    --accent-soft: #B8860B;  /* Dark Goldenrod */
+    --text-muted: #A9A9A9;  /* Dark Gray */
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Gaegu', 'HS-Regular', 'Malgun Gothic', sans-serif;
+    font-family: 'SunBatang-Light', 'Malgun Gothic', sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-light);
     line-height: 1.6;
-}
-
-h1 {
-    font-family: 'HSJiptokki-Black', 'Malgun Gothic', sans-serif;
 }
 
 .container {
@@ -46,7 +49,7 @@ h1 {
 nav {
     background-color: var(--bg-darker);
     padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(192,160,128,0.2);
 }
 
 nav .container {
@@ -56,7 +59,8 @@ nav .container {
 }
 
 nav h1 {
-    color: var(--accent-pink);
+    font-family: 'HS-Regular', 'Malgun Gothic', sans-serif;
+    color: var(--accent-bright);
     font-size: 2rem;
     margin: 0;
 }
@@ -80,7 +84,7 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--accent-purple);
+    color: var(--accent-gold);
 }
 
 .menu-toggle {
@@ -102,18 +106,19 @@ section {
     border-radius: 8px;
     padding: 2rem;
     margin-bottom: 2rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(192,160,128,0.2);
 }
 
 h2, h3, h4 {
+    font-family: 'SF_HambakSnow', 'Malgun Gothic', sans-serif;
     margin-top: 0;
-    color: var(--accent-pink);
+    color: var(--accent-gold);
 }
 
 h2 {
     font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    border-bottom: 2px solid var(--accent-purple);
+    text-shadow: 2px 2px 4px rgba(192,160,128,0.3);
+    border-bottom: 2px solid var(--accent-soft);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
 }
@@ -131,7 +136,7 @@ h2 {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(192,160,128,0.3);
     margin-bottom: 2rem;
 }
 
@@ -141,9 +146,10 @@ h2 {
 }
 
 .hero h2 {
+    font-family: 'SunBatang-Light', 'Malgun Gothic', sans-serif;
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    text-shadow: 2px 2px 4px rgba(192,160,128,0.2);
     line-height: 1.2;
     width: 100%;
     border-bottom: none;
@@ -152,17 +158,18 @@ h2 {
 
 .hero p {
     font-size: 1.5rem;
-    color: var(--accent-mint);
+    color: var(--accent-gold);
     margin-top: 1rem;
 }
 
 .highlight {
-    color: #FFD700;
+    font-family: 'HS-Regular', 'Malgun Gothic', sans-serif;
+    color: var(--accent-bright);
     font-size: 3.4em;
     display: block;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 2px 2px 4px rgba(192,160,128,0.3);
     letter-spacing: 8px;
 }
 
@@ -179,7 +186,7 @@ h2 {
 
 .info-list li span {
     margin-right: 0.5rem;
-    color: var(--accent-pink);
+    color: var(--accent-gold);
 }
 
 .artist-grid {
@@ -189,18 +196,19 @@ h2 {
 }
 
 .artist-card {
-    background-color: rgba(255,255,255,0.05);
+    background-color: rgba(192,160,128,0.1);
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(192,160,128,0.2);
     display: flex;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .artist-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(192,160,128,0.3);
 }
 
 .artist-info {
@@ -213,7 +221,7 @@ h2 {
     margin-left: 1rem;
     overflow: hidden;
     border-radius: 50%;
-    border: 3px solid var(--accent-purple);
+    border: 3px solid var(--accent-soft);
 }
 
 .artist-photo img {
@@ -225,21 +233,14 @@ h2 {
 .artist-card h4 {
     margin-top: 0;
     margin-bottom: 0.5rem;
-    color: var(--accent-pink);
+    color: var(--accent-bright);
     font-size: 1.8rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 3px rgba(192,160,128,0.3);
 }
 
-.artist-link {
-    display: inline-block;
-    color: var(--accent-purple);
-    text-decoration: none;
-    margin-top: 0.5rem;
-    transition: color 0.3s ease;
-}
-
-.artist-link:hover {
-    color: var(--accent-pink);
+.instagram-link {
+    color: var(--accent-gold);
+    font-style: italic;
 }
 
 .location-info p {
@@ -247,14 +248,14 @@ h2 {
 }
 
 .location-info strong {
+    font-family: 'HS-Regular', 'Malgun Gothic', sans-serif;
     font-size: 1.2rem;
-    color: var(--accent-mint);
+    color: var(--accent-gold);
 }
 
 .parking-info {
     font-size: 0.9rem;
-    color: var(--text-light);
-    opacity: 0.8;
+    color: var(--text-muted);
 }
 
 .map-container {
@@ -262,6 +263,7 @@ h2 {
     border-radius: 8px;
     overflow: hidden;
     max-width: 100%;
+    cursor: pointer;
 }
 
 .static-map {
@@ -269,20 +271,25 @@ h2 {
     height: auto;
     display: block;
     border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.static-map:hover {
+    opacity: 0.8;
 }
 
 footer {
     background-color: var(--bg-darker);
     padding: 1rem;
     text-align: center;
-    color: var(--text-light);
+    color: var(--text-muted);
     font-size: 0.9rem;
 }
 
 .booking-button {
     display: inline-block;
-    background-color: var(--accent-pink);
-    color: var(--bg-dark);
+    background-color: var(--accent-soft);
+    color: var(--text-light);
     padding: 12px 24px;
     border-radius: 30px;
     text-decoration: none;
@@ -290,18 +297,19 @@ footer {
     font-size: 1.2rem;
     margin-top: 1rem;
     transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(192,160,128,0.1);
 }
 
 .booking-button:hover {
-    background-color: var(--accent-purple);
+    background-color: var(--accent-bright);
+    color: var(--bg-darker);
     transform: translateY(-2px);
-    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 8px rgba(192,160,128,0.15);
 }
 
 .booking-button:active {
     transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(192,160,128,0.1);
 }
 
 .clickable-address, .clickable-image {
@@ -315,7 +323,7 @@ footer {
 
 .clickable-address {
     text-decoration: underline;
-    color: var(--accent-mint);
+    color: var(--accent-gold);
 }
 
 @media (max-width: 768px) {
