@@ -8,7 +8,7 @@ const ConcertWebsite = () => {
     {
       name: "허정혁",
       description: "서정의 시인",
-      photoUrl: "https://i.namu.wiki/i/H9DQCyBXqmN5AeZ5tZpRsAQe9CQheCNC_1g9MV_qdi_CeQ3T8yJ-oYwJQJgXhbZc2MNou5tAA0jlwKI0UUzSV6oCBrRgmOxMfVmOlV0iOxT8ciNCWanXe17IvE9CCmFkzeLbBk-ae3a0NTImWQd1RQ.webp",
+      photoUrl: "https://image.fnnews.com/resource/media/image/2023/07/18/202307181447048048_l.jpg",
       instagram: "huhjunghyuk_"
     },
     {
